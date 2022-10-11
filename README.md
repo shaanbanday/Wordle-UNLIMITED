@@ -1,2 +1,5 @@
 # Wordle-UNLIMITED
 A clone of the popular New York Times Game created in Java, which advanced object oriented programming principles.
+
+The following program/class creates an instance of the GUI and handles all the logic of Wordle. It holds the code for the methods which control the starting, winning, and losing of a game. The GUI — named Board() — calls those methods when a button is clicked or if the user reaches the maximum number of moves. The GameManager() also takes care of the logic to call the WordBank() class to set a word
+out of the word list. After a turn is done, the Board() passes that word to the GameManager(), which checks the word to see if there is a match and which letters to colour what. To do this, the GameManager makes a reference to the SlowlyCHangeColours() class, which inherits from TimerTask to one-by-one reveal the letters and their status as grey, green, or yellow. Lastly, when the game is one, the GameManager() reads from a file to check for the high score of the day. It uses the DateClass() from a previous assignment, which checks the computer's date to see if the date in the text file matches with "today."
